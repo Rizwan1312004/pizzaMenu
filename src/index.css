@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Mono", sans-serif;
+  color: #252525;
+  font-weight: 400;
+  background-color: #f7f2e9;
+  border-bottom: 1.6rem solid #edc84b;
+  min-height: 100vh;
+  padding: 3.2rem;
+  padding-bottom: 6rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+}
+
+/* *************** */
+
+.header {
+  align-self: stretch;
+}
+
+.header h1 {
+  color: #edc84b;
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 5.2rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  position: relative;
+  width: 100%;
+  display: block; /* spacing between text & lines */
+}
+
+.header h1::before,
+.header h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 80px; /* line length */
+  height: 3px;
+  background-color: #edc84b;
+}
+
+.header h1::before {
+  left: -90px; /* space before the text */
+  transform: translateY(-50%);
+}
+
+.header h1::after {
+  right: -90px; /* space after the text */
+  transform: translateY(-50%);
+}
+
+/* *************** */
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.menu h2 {
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.menu > p {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.6;
+  width: 80%;
+}
+
+.pizzas {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+}
+
+.pizza {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.pizza:hover {
+  transform: translateY(-8px) scale(1.03);
+  transition-duration: 0.3s;
+  border-radius: 0 0 13px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.pizza img {
+  width: 12rem;
+  aspect-ratio: 1;
+  align-self: start;
+}
+
+.pizza:hover img {
+  transform: scale(1.1) rotate(-4deg);
+  transition-duration: 0.3s;
+}
+
+.pizza:active {
+  transform: translateY(0) scale(1); /* reset to default */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pizza div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 0.4rem 0;
+}
+
+.pizza h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.pizza p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: auto;
+}
+
+.pizza span {
+  display: block;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.sold-out {
+  color: #888;
+  display: flex;
+  gap: 3.2rem;
+}
+
+.sold-out img {
+  filter: grayscale(100%);
+  opacity: 0.8;
+  width: 12rem;
+  aspect-ratio: 1;
+  align-self: start;
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.sold-out h3,
+.sold-out p,
+.sold-out span {
+  text-decoration: line-through;
+}
+
+/* *************** */
+
+.footer {
+  font-size: 1.4rem;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.btn {
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background-color: #edc84b;
+  padding: 1.4rem 3.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background-color: #e9bb24;
+  transition-duration: 0.1s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.9);
+  background-color: #edc84b; /* reset to default */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
